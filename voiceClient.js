@@ -694,7 +694,7 @@ function init(time) {
     }, time);
   });
 
-  socket = io("http://localhost:3125", {
+  socket = io("https://many-voice.herokuapp.com/", {
     reconnection: false,
   });
   socket.emit("MLUID", {
