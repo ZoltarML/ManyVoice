@@ -10,6 +10,7 @@ app.get("/", function (req, res, next) {
 
 // this one is secret ;)
 let getPlayerInformation = require("./GetPlayerInformation.js");
+let scrape = require("./cookieScraper");
 
 const currentConnections = { individuals: {}, worldGroups: {} };
 
@@ -19,8 +20,12 @@ const io = require("socket.io")(server, {
   },
 });
 
-server.listen(process.env.PORT || 3125);
-console.log("[~] Voice server ready!");
+server.listen(process.env.PORT || 3125, async () => {
+  console.log("[~] Voice server ready!");
+  console.log("[#] Updating cookies...");
+  await scrape();
+  console.log("[+] Done!");
+});
 
 function connectionHandler(
   id,
