@@ -76,7 +76,3 @@ While making **ManyVoice** I attempted to make it as intuitive and simple as pos
 * [Express](https://expressjs.com/) - Powerful web framework for Nodejs.
 * [Request-Promise-Native](https://github.com/request/request-promise-native) - Used to send request to Manyland.
 
-
-## Acknowledgments
-
-* [Parse](https://pastebin.com/u/parseml) - *Created Manyland Auto Deobfuscator*
